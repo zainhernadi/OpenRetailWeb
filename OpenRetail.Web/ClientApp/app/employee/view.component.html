@@ -1,0 +1,32 @@
+<h1>List Pegawai</h1>
+<button mat-button color="primary">Click me!</button>
+
+<p *ngIf="!listEmployee"><em>Loading...</em></p>
+
+<table class='table' *ngIf="listEmployee">
+    <thead>
+        <tr>
+            <th>Kode Pegawai</th>
+            <th>Nama Pegawai</th>
+            <th>Alamat</th>
+            <th>Telp. Rumah</th>
+            <th>Telp. HP</th>
+            <th>Status Pegawai</th>
+            <th>Email</th>
+            <th>Divisi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of listEmployee">
+            <td>{{ employee.employeeCode }}</td>
+            <td>{{ employee.employeeName }}</td>
+            <td>{{ employee.address }}</td>
+            <td>{{ employee.phone }}</td>
+            <td>{{ employee.hp }}</td>
+            <td>{{ employee.status }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.divisionName }}</td>
+        </tr>
+    </tbody>
+</table>
+
